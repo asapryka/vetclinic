@@ -9,7 +9,7 @@ class Post(models.Model):
         default=timezone.now)
     owner_first_name = models.CharField(max_length=50)  # ім`я госпордара тварини
     owner_last_name = models.CharField(max_length=50)  # прізвище господара тварини
-    owner_phone_number = models.IntegerField  # телефон господара
+    owner_phone_number = models.CharField(max_length=14)  # телефон господара
     animal = models.CharField(max_length=50)  # тварина (пес, кіт, і т.д.)
     animal_name = models.CharField(max_length=50)  # кличка тварини
     disease = models.CharField(max_length=100)  # хвороба, діагноз, або причина візиту
