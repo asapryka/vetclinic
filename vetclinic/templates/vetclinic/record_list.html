@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Записи прийомів.</title>
+    </head>
+    <body>
+        {% for post in posts %}
+        <div>
+            <h2><a href="">Кличка тварини: {{ post.animal_name }}</a></h2>
+            <h4>Господар: {{ post.owner_last_name }} {{ post.owner_first_name }}, {{ post.owner_phone_number }}</h4>
+            <h4><a href="">Клініка: {{ post.clinic_name }}</a></h4>
+            <p>Вівдвідали клініку: {{ post.visit_date }}</p>
+            <h4>Лікар: {{ post.doctor }}</h4>
+            <h4>Діагноз чи причина візиту: {{ post.disease }}</h4>
+            <p>Додаткові коментарі: {{ post.text }}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>

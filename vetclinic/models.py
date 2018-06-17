@@ -3,8 +3,9 @@ from django.utils import timezone
 
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)  # ім`я лікаря, хто створює запис
-    created_date = models.DateTimeField(  # дата внесення запмсу
+    clinic_name = models.CharField(max_length=30)  # назва клініки
+    doctor = models.ForeignKey('auth.User', on_delete=models.CASCADE)  # ім`я лікаря, хто створює запис
+    visit_date = models.DateTimeField(  # дата відвідування клініки
         default=timezone.now)
     owner_first_name = models.CharField(max_length=50)  # ім`я госпордара тварини
     owner_last_name = models.CharField(max_length=50)  # прізвище господара тварини
@@ -19,4 +20,4 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.animal_name
