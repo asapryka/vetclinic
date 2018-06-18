@@ -117,6 +117,23 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
-STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/index.html',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/news-detail.html',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/animate.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/bootstrap.min.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/font-awesome.min.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/owl.carousel.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/owl.theme.default.min.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/css/tooplate-style.css',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/fonts/',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/images/',
+    'C:/Users/asapryka/PycharmProjects/vetclinic/vetclinic/static/bootstrap/js/',
+)
+STATIC_URL = '/vetclinic/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
