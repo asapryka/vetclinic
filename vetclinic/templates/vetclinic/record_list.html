@@ -3,20 +3,17 @@
     <head>
         <title>Записи прийомів.</title>
         <link href="{{ STATIC_URL }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
-        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
-        <!--<link rel="stylesheet" href="{% static 'css/vetclinic.css' %}">-->
     </head>
     <body>
-        {% for post in posts %}
+        {% for record in records %}
         <div>
-            <h2><a href="">Кличка тварини: {{ post.animal_name }}</a></h2>
-            <h4>Господар: {{ post.owner_last_name }} {{ post.owner_first_name }}, {{ post.owner_phone_number }}</h4>
-            <h4><a href="">Клініка: {{ post.clinic_name }}</a></h4>
-            <p>Вівдвідали клініку: {{ post.visit_date }}</p>
-            <h4>Лікар: {{ post.doctor }}</h4>
-            <h4>Діагноз чи причина візиту: {{ post.disease }}</h4>
-            <p>Додаткові коментарі: {{ post.text }}</p>
+            <h2><a href="">Кличка тварини: {{ record.animal_name }}</a></h2>
+            <h4>Господар: {{ record.owner_full_name }} </h4>
+            <h4><a href="">Клініка: {{ record.clinic_name }}</a></h4>
+            <p>Вівдвідали клініку: {{ record.visit_date }}</p>
+            <h4>Лікар: {{ record.doctor }}</h4>
+            <h4>Діагноз чи причина візиту: {{ record.disease }}</h4>
+            <p>Додаткові коментарі: {{ record.text }}</p>
         </div>
         {% endfor %}
     </body>
