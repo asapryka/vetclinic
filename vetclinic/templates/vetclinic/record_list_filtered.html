@@ -7,9 +7,9 @@
     <body>
         {% for record in records %}
         <div class="col-md-6 col-sm-6">
-            <h4>Кличка тварини: <a href="/vetclinic/{{ record.animal_name }}">{{ record.animal_name }}</a></h4>
-            <h4>Господар: <a href="">{{ record.owner_full_name }} </a></h4>
-            <h4>Клініка: <a href="">{{ record.clinic_name }}</a></h4>
+            <h4>Кличка тварини: <a href="">{{ record.animal_name }}</a></h4>
+            <h4>Господар: <a href="/{{ record.owner_full_name }}">{{ record.owner_full_name }} </a></h4>
+            <h4>Клініка: <a href="/{{ record.clinic_name }}">{{ record.clinic_name }}</a></h4>
             <h4>Вівдвідали клініку: {{ record.visit_date }}</h4>
             <h4>Діагноз чи причина візиту: {{ record.disease }}</h4>
             <h4>Додаткові коментарі: {{ record.text }}</h4>

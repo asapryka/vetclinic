@@ -4,5 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path(r'', views.record_list, name='record_list'),
+    url(r'^$', views.record_list, name='record_list'),
+    url(r'^(?P<url>.*)/$', views.record_list_filtered, name='record_list_filtered')
 ]
