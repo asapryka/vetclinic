@@ -24,7 +24,7 @@ class Animal(models.Model):
     animal_birth_date = models.DateField()  # дата народження тварини
 
     def __str__(self):
-        return self.animal_name
+        return '%s' % (self.animal_name)
 
 
 class Record(models.Model):

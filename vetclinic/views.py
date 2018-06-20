@@ -13,6 +13,6 @@ def record_list(request):
     return render(request, 'vetclinic/record_list.html', {'records': records})
 
 def record_list_filtered(request, url):
-    animals = Animal.objects.get(pk=url)
-    records = Record.objects.filter(animal_name=animals)
+    animals = Animal.objects.filter(animal_name=url)
+    records = Record.objects.filter(animal_name__in=[animal.pk for animal in animals])
     return render(request, 'vetclinic/record_list_filtered.html', {'records': records})
